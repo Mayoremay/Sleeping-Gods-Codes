@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sleeping Gods</title>
+
+<style>
+
+body{
+background:#0f0f0f;
+color:#d8d8d8;
+font-family:Consolas, monospace;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.caja{
+width:500px;
+border:1px solid #555;
+padding:40px;
+background:#181818;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:20px;
+background:black;
+color:white;
+border:1px solid gray;
+}
+
+button{
+margin-top:20px;
+padding:12px;
+width:100%;
+cursor:pointer;
+}
+
+#poema{
+margin-top:30px;
+white-space:pre-line;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="caja">
+
+<h2>EDHA ARCHIVE SYSTEM</h2>
+
+<p>Ingrese la clave de acceso.</p>
+
+<input id="codigo">
+
+<button onclick="comprobar()">
+Validar
+</button>
+
+<div id="poema"></div>
+
+</div>
+
+<script>
+
+function comprobar(){
+
+let codigo=document.getElementById("codigo").value.toUpperCase();
+
+if(codigo=="KILLA"){
+
+document.getElementById("poema").innerHTML=`
+
+<hr>
+
+<h3>Registro encontrado</h3>
+
+Los dioses jamás dejaron este mundo.
+
+Solo aprendieron
+
+a dormir
+
+bajo nuestros pies.
+
+`;
+
+}else{
+
+document.getElementById("poema").innerHTML=`
+
+<hr>
+
+Acceso denegado.
+
+`;
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

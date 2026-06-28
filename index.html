@@ -69,14 +69,9 @@ Validar
 
 <script>
 
-function comprobar(){
+const archivos = {
 
-let codigo=document.getElementById("codigo").value.toUpperCase();
-
-if(codigo=="KILLA"){
-
-document.getElementById("poema").innerHTML=`
-
+"KILLA": `
 <hr>
 
 <h3>Registro encontrado</h3>
@@ -107,7 +102,7 @@ Atacarán a los fuertes,
 y cuando la última barrera caiga,
 manipularán a los débiles
 para poder nacer de nuevo
-y así poner fin a nuestra melódica armonía
+y así poner fin a nuestra melódica armonía.
 
 Cuida tu conciencia y tu psique.
 De ellos no hables,
@@ -115,17 +110,78 @@ no los mires,
 no los pienses.
 
 Ellos no son tangibles... aún.
+`,
 
-`;
+"JASPER": `
+<hr>
+<h3>Registro encontrado</h3>
+PROVISIONAL
+`,
+
+"ZEDRICK": `
+<hr>
+<h3>Registro encontrado</h3>
+PROVISIONAL
+`,
+
+"MILLER": `
+<hr>
+<h3>Registro encontrado</h3>
+PROVISIONAL
+`,
+
+"MIKA": `
+<hr>
+<h3>Registro encontrado</h3>
+PROVISIONAL
+`,
+
+"EDHA": `
+<hr>
+<h3>Registro encontrado</h3>
+PROVISIONAL
+`,
+
+"MAYOREMAY": `
+<hr>
+<h3>Registro encontrado</h3>
+PROVISIONAL
+`,
+
+"EMLEX": `
+<hr>
+<h3>Registro encontrado</h3>
+PROVISIONAL
+`,
+
+"CAP": `
+<hr>
+<h3>Registro encontrado</h3>
+PROVISIONAL
+`,
+
+"NAIN": `
+<hr>
+<h3>Registro encontrado</h3>
+PROVISIONAL
+`
+
+};
+
+function comprobar(){
+
+let codigo = document.getElementById("codigo").value.toUpperCase().trim();
+
+if(archivos[codigo]){
+
+document.getElementById("poema").innerHTML = archivos[codigo];
 
 }else{
 
-document.getElementById("poema").innerHTML=`
-
+document.getElementById("poema").innerHTML = `
 <hr>
-
-Acceso denegado.
-
+<h3>Acceso denegado</h3>
+La clave introducida no existe.
 `;
 
 }
